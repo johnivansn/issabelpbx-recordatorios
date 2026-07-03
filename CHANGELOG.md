@@ -2,13 +2,13 @@
 
 ## 1.0.1
 
-- Mejora del flujo telef?nico con cancelaci?n y grabaci?n m?s clara.
+- Mejora del flujo telefonico con cancelacion y grabacion mas clara.
 - Ajustes en la interfaz web.
-- Mejoras en validaci?n, audio y trazabilidad.
+- Mejoras en validacion, audio y trazabilidad.
 - Limpieza mejorada al desinstalar.
 
 ## 1.0.0
 
-- Versi?n base funcional del m?dulo.
-- Creaci?n, listado, edici?n y borrado de recordatorios.
-- Integraci?n inicial con IssabelPBX 5.
+- Version base funcional del modulo.
+- Creacion, listado, edicion y borrado de recordatorios.
+- Integracion inicial con IssabelPBX 5.
