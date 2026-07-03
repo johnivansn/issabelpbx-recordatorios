@@ -16,6 +16,7 @@ Modulo de IssabelPBX 5 para crear, listar, editar, borrar y reproducir recordato
 - [Instalacion](INSTALL.md)
 - [Uso](USAGE.md)
 - [Changelog](CHANGELOG.md)
+- [Scripts](scripts/README.md)
 
 ## Versionado y releases
 
@@ -30,6 +31,7 @@ Modulo de IssabelPBX 5 para crear, listar, editar, borrar y reproducir recordato
 - `recordatorios/`: codigo fuente del modulo para IssabelPBX.
 - `docs/`: documentacion tecnica privada.
 - `versiones/`: entregables o paquetes generados.
+- `scripts/`: utilidades para empaquetar y probar.
 
 ## Requisitos
 

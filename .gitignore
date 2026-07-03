@@ -5,9 +5,7 @@ Thumbs.db
 *.tmp
 
 # Artifacts
-versiones/*.tgz
-versiones/*.tar.gz
-versiones/*.zip
+versiones/
 docs/
 
 # Generated audio
