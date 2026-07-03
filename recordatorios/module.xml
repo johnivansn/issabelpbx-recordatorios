@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+  <rawname>recordatorios</rawname>
+  <name>Recordatorios Diarios</name>
+  <version>1.0.1</version>
+  <publisher>Grupo 3 - Telefonía IP</publisher>
+  <license>GPLv3</license>
+  <category>Applications</category>
+  <embedcategory>Applications</embedcategory>
+  <description>Servicio de recordatorios diarios mediante *5432.</description>
+
+  <depends>
+    <module>framework</module>
+    <module>core</module>
+  </depends>
+
+  <menuitems>
+    <recordatorios>Recordatorios</recordatorios>
+  </menuitems>
+
+  <candisable>yes</candisable>
+  <canuninstall>yes</canuninstall>
+</module>

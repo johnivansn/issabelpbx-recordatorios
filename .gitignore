@@ -1,0 +1,19 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*.tmp
+
+# Artifacts
+versiones/*.tgz
+versiones/*.tar.gz
+versiones/*.zip
+docs/
+
+# Generated audio
+recordatorios/sounds/**/*.wav
+recordatorios/sounds/**/*.slin
+recordatorios/sounds/**/*.gsm
+
+# Logs
+*.log
