@@ -17,6 +17,14 @@ Modulo de IssabelPBX 5 para crear, listar, editar, borrar y reproducir recordato
 - [Uso](USAGE.md)
 - [Changelog](CHANGELOG.md)
 
+## Versionado y releases
+
+- La version oficial del modulo vive en `recordatorios/module.xml`.
+- Los tags de Git deben usar el formato `vX.Y.Z`, por ejemplo `v1.0.1`.
+- El workflow de build valida la sintaxis PHP y genera el `.tgz` como artifact.
+- El workflow de release publica el paquete en GitHub Releases cuando el tag coincide con la version del modulo.
+- Si cambias el codigo, actualiza primero `module.xml` y luego crea el tag correspondiente.
+
 ## Estructura del repositorio
 
 - `recordatorios/`: codigo fuente del modulo para IssabelPBX.
