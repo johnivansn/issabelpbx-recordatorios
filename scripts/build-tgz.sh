@@ -2,8 +2,8 @@
 set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-MODULE_DIR="${ROOT_DIR}/recordatorios"
-OUTPUT_DIR="${ROOT_DIR}/versiones"
+MODULE_DIR="${MODULE_DIR:-${ROOT_DIR}/recordatorios}"
+OUTPUT_DIR="${OUTPUT_DIR:-${ROOT_DIR}/versiones}"
 
 if [[ ! -f "${MODULE_DIR}/module.xml" ]]; then
   echo "No se encontro ${MODULE_DIR}/module.xml" >&2

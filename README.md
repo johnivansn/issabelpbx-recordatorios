@@ -10,6 +10,32 @@ Modulo de IssabelPBX 5 para crear, listar, editar, borrar y reproducir recordato
 - Genera llamadas automaticas con `cron`.
 - Ofrece un flujo telefonico mediante `*5432`.
 
+## Como reutilizar este repo
+
+Este proyecto puede servir como base para otros modulos de IssabelPBX.
+
+Lo importante al reutilizarlo es cambiar:
+
+- `recordatorios/module.xml` con el nuevo `rawname`, nombre visible y version.
+- El nombre del directorio del modulo si el ejemplo deja de llamarse `recordatorios`.
+- Las rutas internas de AGI, sonidos y pagina web que dependan del nombre del modulo.
+- La salida del empaquetado si quieres otro nombre final en el `.tgz`.
+
+El script `scripts/build-tgz.sh` ya permite cambiar `MODULE_DIR` y `OUTPUT_DIR` por variables de entorno, asi que se puede reutilizar sin tocarlo mucho.
+
+Mientras este repo siga siendo el ejemplo del modulo actual, es normal que aparezcan muchas referencias a `recordatorios` en codigo, logs y rutas.  
+Eso no es un problema por si mismo: solo debes reemplazar esas referencias cuando clonas el repo para construir otro modulo distinto.
+
+## Estructura pensada para plantilla
+
+La estructura del repo esta organizada para que puedas copiarla como base de otros modulos:
+
+- `recordatorios/`: ejemplo completo de modulo funcional.
+- `scripts/`: helpers de empaquetado reutilizables.
+- `Taskfile.yml`: tareas simples para validar y empaquetar.
+- `docs/`: documentacion interna del ejemplo y del proceso.
+- `README.md`, `INSTALL.md`, `USAGE.md`, `ARCHITECTURE.md`: docs publicas que puedes adaptar para otro modulo.
+
 ## Documentacion publica
 
 - [Arquitectura](ARCHITECTURE.md)
