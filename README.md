@@ -26,6 +26,7 @@ Modulo de IssabelPBX 5 para crear, listar, editar, borrar y reproducir recordato
 - El `.tgz` se genera localmente con `scripts/build-tgz.sh` cuando hace falta probar el modulo en Issabel.
 - No publicamos releases automáticos desde GitHub; el paquete final se genera y se instala según el flujo de trabajo del proyecto.
 - Si cambias el codigo, actualiza primero `module.xml` y prueba el build en `main` o en una PR.
+- Si prefieres usar una interfaz de tareas, ejecuta `task lint` o `task package` con `Taskfile.yml`.
 
 ## Estructura del repositorio
 
@@ -33,6 +34,7 @@ Modulo de IssabelPBX 5 para crear, listar, editar, borrar y reproducir recordato
 - `docs/`: documentacion tecnica privada.
 - `versiones/`: entregables o paquetes generados.
 - `scripts/`: utilidades para empaquetar y probar.
+- `Taskfile.yml`: tareas rapidas para validar y empaquetar.
 
 ## Requisitos
 

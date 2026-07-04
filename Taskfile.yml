@@ -1,0 +1,47 @@
+version: '3'
+
+tasks:
+  default:
+    desc: Valida el modulo
+    cmds:
+      - task: check
+
+  check:
+    desc: Ejecuta las validaciones del modulo
+    cmds:
+      - task: lint
+
+  lint:
+    desc: Verifica la sintaxis PHP y module.xml
+    cmds:
+      - |
+        set -euo pipefail
+        while IFS= read -r file; do
+          php -l "$file"
+        done < <(find recordatorios -type f -name '*.php' | sort)
+      - |
+        set -euo pipefail
+        php -r '
+        $xml = simplexml_load_file("recordatorios/module.xml");
+        if (!$xml) {
+            fwrite(STDERR, "Unable to parse module.xml\n");
+            exit(1);
+        }
+        if ((string) $xml->rawname !== "recordatorios") {
+            fwrite(STDERR, "Invalid rawname in module.xml\n");
+            exit(1);
+        }
+        '
+
+  package:
+    desc: Genera el paquete tgz local
+    cmds:
+      - bash scripts/build-tgz.sh
+
+  clean:
+    desc: Elimina artefactos generados localmente
+    cmds:
+      - |
+        rm -rf build
+        rm -f versiones/*.tgz
+        rm -f recordatorios-*.tgz

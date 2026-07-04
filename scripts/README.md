@@ -17,3 +17,14 @@ El paquete se guarda en `versiones/` con el nombre:
 ```text
 recordatorios-<version>.tgz
 ```
+
+## Alternativa con Task
+
+Si tienes `task` instalado, puedes usar:
+
+```bash
+task check
+task lint
+task package
+task clean
+```
