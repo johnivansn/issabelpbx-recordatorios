@@ -4,10 +4,7 @@ on:
   push:
     branches:
       - main
-    tags:
-      - 'v*'
   pull_request:
-  workflow_dispatch:
 
 jobs:
   lint:
@@ -63,17 +60,6 @@ jobs:
           VERSION="$(php -r '$xml = simplexml_load_file("recordatorios/module.xml"); echo (string) $xml->version;')"
           echo "rawname=$RAWNAME" >> "$GITHUB_OUTPUT"
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"
-
-      - name: Validate git tag matches module version
-        if: github.ref_type == 'tag'
-        run: |
-          set -euo pipefail
-          TAG="${GITHUB_REF_NAME#v}"
-          VERSION="${{ steps.meta.outputs.version }}"
-          if [ "$TAG" != "$VERSION" ]; then
-            echo "Git tag ($GITHUB_REF_NAME) does not match module.xml version ($VERSION)" >&2
-            exit 1
-          fi
 
       - name: Build package tree
         run: |
